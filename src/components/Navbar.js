@@ -11,10 +11,16 @@ export default function Navbar() {
     <div className="nav">
       <div className="container">
 
-        <div className="collapsible">
-          <FaBars size="20px" />All Category
+        <div className="collapsible dropdown">
+          <div>
+            <FaBars size="20px" />
+            All Category
+            <FaChevronDown size="11px" className="link" onClick={() => setOpen(!open)} />
+          </div>
 
-          <FaChevronDown size="11px" onClick={() => setOpen(!open)} />
+          <div className="dropdown-menu">
+            {open && <NavItems />}
+          </div>
         </div>
 
         <div className="nav-items">
@@ -29,11 +35,11 @@ export default function Navbar() {
 
       </div>
 
-      <div className="container">
+      {/* <div className="container">
         <div id="dropdown">
           {open && <NavItems />}
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

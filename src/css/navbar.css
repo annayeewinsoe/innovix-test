@@ -6,24 +6,6 @@
   position: relative;
 }
 
-#dropdown {
-  position: absolute;
-  z-index: 100;
-  width: 270px;
-  background-color: var(--secondary);
-  color: #FFFFFF;
-  padding: 0 20px;
-}
-
-#dropdown li {
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
-#dropdown li:hover {
-  color: var(--primary);
-}
-
 .nav .container {
   height: 100%;
   background-color: var(--black);
@@ -31,15 +13,42 @@
   justify-content: space-around;
 }
 
-.nav .container:nth-child(2) {
-  background-color: transparent;
+.dropdown li {
+  margin: 20px;
+  cursor: pointer;
+}
+
+.dropdown li:hover {
+  color: var(--primary);
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: auto;
+  top: calc(100% + 10px);
+  background-color: var(--secondary);
+  border-radius: 10px;
+  pointer-events: none;
+
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity .2s ease-in-out, transform .2s ease-in-out;
+}
+
+/* .dropdown .link:focus */
+.dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .collapsible {
-  background-color: var(--secondary);
   flex-basis: 270px;
-  height: 100%;
+}
 
+.collapsible > div:nth-child(1) {
+  background-color: var(--secondary);
+  height: 100%;
   font-size: 16px;
   color: #FFFFFF;
   text-transform: uppercase;
