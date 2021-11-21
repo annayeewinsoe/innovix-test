@@ -1,0 +1,47 @@
+.rec.rec-slider-container {
+  margin: 0;
+}
+
+.rec img {
+  width: 100%;
+}
+
+.rec.rec-dot {
+  width: 25px;
+  height: 3px;
+  margin: 2px;
+  box-shadow: none;
+  border-radius: 0;
+  background-color: var(--secondary);
+}
+
+.rec.rec-dot:hover {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.rec.rec-dot_active {
+  box-shadow: none;
+  background-color: var(--primary);
+}
+
+.rec-carousel-wrapper {
+  position: relative;
+}
+
+.rec-pagination {
+  position: absolute;
+  bottom: 15px;
+}
+
+.rec.rec-arrow {
+  display: none;
+}
+
+@media screen and (max-width: 549px) {
+  .rec-pagination {
+    bottom: -20px;
+  }
+}
+

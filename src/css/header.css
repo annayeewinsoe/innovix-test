@@ -1,0 +1,148 @@
+#header {
+    width: 100%;
+    min-height: 100px;
+    background-color: #FFFFFF;
+}
+
+#header .container {
+    background-color: #FFFFFF;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    display: inline-block;
+    width: 196px;
+    margin: 12px 0;
+}
+
+.search {
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 25px;
+    width: 470px;
+    height: 50px;
+    padding: 1px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search input {
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    background: none;
+
+    font-size: 16px;  
+}
+
+.search input * {
+    color: #DDDDDD;
+}
+
+.search button {
+    width: 75px;
+    height: 45px;
+
+    background-color: var(--primary);
+    border: 0;
+    outline: none;
+    border-radius: 25px;
+}
+
+.account {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login, .cart {
+    flex: 1;
+    min-width: 150px;
+    margin: 0 5px;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login > div, .cart > div {
+    flex: 2;
+}
+
+.icon {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.account p {
+    font-size: 13px;
+    color: #707070;
+    margin: 0;
+}
+
+.account h3 {
+    font-size: 17px;
+    color: var(--black);
+    margin: 0;
+}
+
+/* 
+320 - 549
+550 - 799
+800 - 1199
+1200 - 1399*/
+@media screen and (max-width: 1399px) {
+    .search {
+        width: 400px;
+    }
+}
+
+
+@media screen and (max-width: 1199px) {
+    #header .account {
+        flex: 100%;
+        margin: 20px 0;
+    }
+
+    .cart, .login {
+        background-color: #EEEEEE;
+        padding: 20px 0;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .search {
+        width: 100px;
+        border: none;
+        justify-content: center;
+    }
+
+    .search input {
+       display: none;
+    }
+}
+
+@media screen and (max-width: 549px) {
+    #logo {
+        width: 150px;
+    }
+
+    .login > div, .cart > div {
+        display: none;
+        flex: 1;
+    }
+
+    .login, .cart {
+        min-width: 10px;
+    }
+}
+
+@media screen and (max-width: 319px) {
+    #logo {
+        width: 100px;
+    }
+}
